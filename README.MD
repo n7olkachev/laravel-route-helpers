@@ -1,4 +1,4 @@
-# Laravel Route Helpers [![Build Status](https://travis-ci.org/n7olkachev/route-helpers.svg?branch=master)](https://travis-ci.org/n7olkachev/route-helpers)
+# Laravel Route Helpers [![Build Status](https://travis-ci.org/n7olkachev/laravel-route-helpers.svg?branch=master)](https://travis-ci.org/n7olkachev/laravel-route-helpers)
 
 Rails like route helpers for your Laravel application.
 
