@@ -26,7 +26,7 @@ admin_home_url();
 admin_users_show_url(['user' => $user->id]);
 ```
 
-It's totally IDE friendly, so after typing admin_ you'll see both helpers as suggestions!
+It's totally IDE friendly, so after typing `admin_` you'll see both helpers as suggestions!
 
 ## Installation
 
