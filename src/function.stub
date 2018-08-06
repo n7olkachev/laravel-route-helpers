@@ -1,0 +1,5 @@
+if (!function_exists('{function_name}')) {
+    function {function_name} ($parameters = [], $absolute = true) {
+        return route('{route_name}', $parameters, $absolute);
+    }
+}

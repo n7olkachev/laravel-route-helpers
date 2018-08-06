@@ -1,0 +1,39 @@
+{
+  "name": "n7olkachev/laravel-route-helpers",
+  "description": "Rails-like route helpers for your Laravel application",
+  "homepage": "https://github.com/n7olkachev/laravel-route-helpers",
+  "keywords":
+  [
+    "laravel",
+    "routes",
+    "helpers"
+  ],
+  "authors": [
+    {
+      "name": "Nikita Tolkachev",
+      "email": "n7olkachev@gmail.com",
+      "homepage": "https://n7olkachev.github.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+      "laravel/framework": "^5.5"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "N7olkachev\\RouteHelpers\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "N7olkachev\\RouteHelpers\\Test\\": "test"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "license": "MIT"
+}
