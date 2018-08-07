@@ -21,7 +21,7 @@ class RouteHelpers extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Generate route helpers';
 
     /**
      * The router instance.
@@ -29,13 +29,19 @@ class RouteHelpers extends Command
      * @var \Illuminate\Routing\Router
      */
     protected $router;
+    
     /**
      * An array of all the registered routes.
      *
      * @var \Illuminate\Routing\RouteCollection
      */
     protected $routes;
-
+    
+    /**
+     * The filesystem instance.
+     *
+     * @var \Illuminate\Filesystem\Filesystem
+     */
     protected $files;
 
     /**
@@ -79,6 +85,11 @@ class RouteHelpers extends Command
         $this->info('Generated ' . $functions->count() . ' helpers!');
     }
 
+    /**
+     * Generate function name.
+     *
+     * @return mixed
+     */
     protected function generateFunctionName(Route $route)
     {
         $functionName = str_replace(['.', '-', ':'], '_', $route->getName()) . '_url';
@@ -90,6 +101,11 @@ class RouteHelpers extends Command
         return $functionName;
     }
 
+     /**
+     * Compile function from a stub.
+     *
+     * @return mixed
+     */
     protected function compileFunction($routeName, $functionName)
     {
         $stub = $this->files->get(__DIR__ . '/function.stub');
@@ -97,6 +113,11 @@ class RouteHelpers extends Command
         return str_replace(['{function_name}', '{route_name}'], [$functionName, $routeName], $stub);
     }
 
+     /**
+     * Save generated result to the fs.
+     *
+     * @return mixed
+     */
     protected function saveResult($result)
     {
         $this->files->put(config('route-helpers.path'), $result);
